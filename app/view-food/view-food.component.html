@@ -27,20 +27,22 @@
 <span *ngFor="let f of foods">
 
     
-    <img src={{f.url}} width="150px" height="150px"/>
-    <span>{{f.name}} {{f.price}} {{f.offer}} {{f.description}}  </span>
-    <app-razorpay></app-razorpay>
- <input type="button" value="delete" (click)="deleteFood(f.id)"/>
-    <input type="button" value="update" (click)="updateFood(f)"/>
+    <img src={{f.url}} width="150px" height="150px"/><br/>
+    <span>{{f.name}}<br/> {{f.price}} <br/>{{f.offer}} <br/>{{f.description}} <br/> </span><br/>
+   
+ <input type="button" value="delete" (click)="deleteFood(f.id)"/><br/><br/>
+    <input type="button" value="update" (click)="updateFood(f)"/><br/>
 </span>
 </div>
 <div *ngIf="flag1">
 <span *ngFor="let f1 of foods1">
 
     
-    <img src={{f1.url}} width="150px" height="150px"/>
-    <span>{{f1.name}} {{f1.price}} {{f1.offer}} {{f1.description}}  </span>
+    <img src={{f1.url}} width="150px" height="150px"/><br/>
+    <span>{{f1.name}}<br/> {{f1.price}}<br/> {{f1.offer}} <br/>{{f1.description}} </span><br/>
 </span>
+<!-- <app-razorpay></app-razorpay> -->
+
 </div>
 
 <form [formGroup]="foodRef" (ngSubmit)="findByName()" id="viewfood2">
@@ -53,8 +55,8 @@
     <span *ngFor="let f2 of foods2">
     
         
-        <img src={{f2.url}} width="150px" height="150px"/>
-        <span>{{f2.name}} {{f2.price}} {{f2.offer}} {{f2.description}}  </span>
+        <img src={{f2.url}} width="150px" height="150px"/><br/>
+        <span>{{f2.name}} <br/>{{f2.price}} <br/>{{f2.offer}}<br/> {{f2.description}} <br/> </span><br/>
     </span>
     </div>
     
